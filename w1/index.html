@@ -1,23 +1,41 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <!-- Load the latest version of TensorFlow.js -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://unpkg.com/@tensorflow/tfjs"></script>
     <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
-    <script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
+    <title>Image Classify</title>
 </head>
 
 <body>
-    <div id="console"></div>
+    <div>
+        <h1>Classify Image</h1>
+        <div id="console"></div>
+        <div class="form">
+            <form id="form1" runat="server">
+                <label for="imageUpload" class="upload-label">Choose</label>
+                <input type='file' id="imgInp" onchange="readURL(this);" />
+            </form>
+        </div>
+
+        <div>
+            <img id="blah" src="https://www.nationalgeographic.com/content/dam/animals/thumbs/rights-exempt/mammals/d/domestic-dog_thumb.ngsversion.1546554600360.adapt.1900.1.jpg" alt="your image" height="224"
+                width="224" />
+        </div>
+        <div class="button">
+            <button type="button" id="predictButton">Predict!</button>
+        </div>
+
+        <div class="loader"></div>
+        <h3 id="result"></h3>
+    </div>
     <!-- Add an image that we will use to test -->
-    <video autoplay playsinline muted id="webcam" width="224" height="224"></video>
-    ...
-    <button id="class-a">Add A</button>
-    <button id="class-b">Add B</button>
-    <button id="class-c">Add C</button>
-    ...
     <!-- Load index.js after the content of the page -->
     <script src="index.js"></script>
+
 </body>
 
 </html>
