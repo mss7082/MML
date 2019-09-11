@@ -13,5 +13,6 @@
         "statusBarItem.hoverBackground": "#63679a",
         "statusBar.foreground": "#e7e7e7"
     },
-    "peacock.color": "#4f527b"
+    "peacock.color": "#4f527b",
+    "python.pythonPath": "/Users/mosokabi/project/MML/w2/.venv/bin/python3"
 }
